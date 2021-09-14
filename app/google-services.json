@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "241803457387",
+    "project_id": "my-ktm-motor",
+    "storage_bucket": "my-ktm-motor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241803457387:android:14ffa6e398d3d72dd4d22e",
+        "android_client_info": {
+          "package_name": "com.myktmmotor.myktmmotor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241803457387-vk8h7bual676v106quaet9747lubi4of.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqYjA7s9Kjqr4RehThuoL4OCBrYE77xKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241803457387-vk8h7bual676v106quaet9747lubi4of.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

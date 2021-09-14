@@ -1,0 +1,2 @@
+rootProject.name = "My KTM motor"
+include ':app'

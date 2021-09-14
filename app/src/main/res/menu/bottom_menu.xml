@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        app:tint="@color/white"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        android:title="Beranda"/>
+    <item
+        android:id="@+id/navigation_service"
+        android:icon="@drawable/ic_baseline_delivery_dining_24"
+        app:cnb_iconColor="@color/white"
+        app:tint="@color/white"
+        app:cnb_textColor="@color/white"
+        android:title="Service"/>
+    <item
+        android:id="@+id/navigation_rating"
+        android:icon="@drawable/ic_baseline_stars_24"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        app:tint="@color/white"
+        android:title="Penilaian" />
+
+</menu>
