@@ -17,7 +17,6 @@ public class MotorViewModel extends ViewModel {
     private static final String TAG = MotorViewModel.class.getSimpleName();
 
     public void setListMotor() {
-
         motorModelArrayList.clear();
 
         try {
@@ -36,7 +35,7 @@ public class MotorViewModel extends ViewModel {
                                 motor.setPrice("" + document.get("price"));
                                 motor.setSpec("" + document.get("spec"));
                                 motor.setTopSpeed("" + document.get("topSpeed"));
-                                motor.setUid("" + document.get("uid"));
+                                motor.setMotorId("" + document.get("motorId"));
                                 motor.setYear("" + document.get("year"));
 
 
@@ -54,7 +53,6 @@ public class MotorViewModel extends ViewModel {
     }
 
     public void setListMotorByQuery(String query) {
-
         motorModelArrayList.clear();
 
         try {
@@ -75,7 +73,7 @@ public class MotorViewModel extends ViewModel {
                                 motor.setPrice("" + document.get("price"));
                                 motor.setSpec("" + document.get("spec"));
                                 motor.setTopSpeed("" + document.get("topSpeed"));
-                                motor.setUid("" + document.get("uid"));
+                                motor.setMotorId("" + document.get("motorId"));
                                 motor.setYear("" + document.get("year"));
 
 

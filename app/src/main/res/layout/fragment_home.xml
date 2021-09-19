@@ -45,6 +45,7 @@
             android:id="@+id/searchEt"
             android:layout_width="match_parent"
             android:drawablePadding="10dp"
+            android:focusable="false"
             android:drawableStart="@drawable/ic_baseline_search_24"
             android:layout_height="wrap_content"
             android:hint="Cari Berdasarkan Nama"
@@ -91,17 +92,16 @@
         app:layout_constraintTop_toTopOf="@+id/rvMotor" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addMotor"
+        android:id="@+id/motorAdd"
         android:layout_width="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="gone"
-        android:src="@drawable/ic_baseline_add_24"
-        app:tint="@color/white"
-        android:backgroundTint="@color/secondary"
-        android:contentDescription="@string/image"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/rvMotor"
-        app:layout_constraintTop_toTopOf="@+id/rvMotor" />
+        android:src="@drawable/ic_baseline_add_24"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:contentDescription="@string/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rvMotor"
+        app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

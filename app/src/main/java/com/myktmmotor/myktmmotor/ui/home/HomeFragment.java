@@ -36,7 +36,6 @@ public class HomeFragment extends Fragment {
         initRecyclerView();
         initViewModel("all");
         getRole();
-
     }
 
     @Override
@@ -45,7 +44,6 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false);
 
-
         return binding.getRoot();
     }
 
@@ -53,7 +51,8 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.addMotor.setOnClickListener(view1 -> startActivity(new Intent(getActivity(), MotorAddActivity.class)));
+
+        binding.motorAdd.setOnClickListener(view1 -> startActivity(new Intent(getActivity(), MotorAddActivity.class)));
 
         binding.logoutBtn.setOnClickListener(view12 -> logout());
 
@@ -79,21 +78,6 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
-    }
-
-    private void getRole() {
-        // CEK APAKAH USER YANG SEDANG LOGIN ADMIN ATAU BUKAN, JIKA YA, MAKA TAMPILKAN tombol add motor
-        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        FirebaseFirestore
-                .getInstance()
-                .collection("users")
-                .document(uid)
-                .get()
-                .addOnSuccessListener(documentSnapshot -> {
-                    if(("" + documentSnapshot.get("role")).equals("admin")) {
-                       binding.addMotor.setVisibility(View.VISIBLE);
-                    }
-                });
     }
 
     private void logout() {
@@ -146,6 +130,21 @@ public class HomeFragment extends Fragment {
                 binding.noData.setVisibility(View.VISIBLE);
             }
         });
+    }
+
+    private void getRole() {
+        // CEK APAKAH USER YANG SEDANG LOGIN ADMIN ATAU BUKAN, JIKA YA, MAKA TAMPILKAN tombol add motor
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        FirebaseFirestore
+                .getInstance()
+                .collection("users")
+                .document(uid)
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    if(("" + documentSnapshot.get("role")).equals("admin")) {
+                        binding.motorAdd.setVisibility(View.VISIBLE);
+                    }
+                });
     }
 
     @Override

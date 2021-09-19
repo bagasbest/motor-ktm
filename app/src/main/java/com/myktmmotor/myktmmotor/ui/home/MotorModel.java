@@ -13,7 +13,7 @@ public class MotorModel implements Parcelable {
     private String year;
     private String dp;
     private String spec;
-    private String uid;
+    private String motorId;
 
     public MotorModel(){}
 
@@ -26,7 +26,7 @@ public class MotorModel implements Parcelable {
         year = in.readString();
         dp = in.readString();
         spec = in.readString();
-        uid = in.readString();
+        motorId = in.readString();
     }
 
     @Override
@@ -39,7 +39,7 @@ public class MotorModel implements Parcelable {
         dest.writeString(year);
         dest.writeString(dp);
         dest.writeString(spec);
-        dest.writeString(uid);
+        dest.writeString(motorId);
     }
 
     @Override
@@ -123,11 +123,11 @@ public class MotorModel implements Parcelable {
         this.spec = spec;
     }
 
-    public String getUid() {
-        return uid;
+    public String getMotorId() {
+        return motorId;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setMotorId(String motorId) {
+        this.motorId = motorId;
     }
 }

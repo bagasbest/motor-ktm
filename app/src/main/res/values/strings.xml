@@ -3,4 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image">image</string>
+    <string name="button">button</string>
+
+    <string-array name="status">
+        <item>Belum Disetujui</item>
+        <item>Sudah Disetujui</item>
+        <item>Selesai</item>
+    </string-array>
+
 </resources>
